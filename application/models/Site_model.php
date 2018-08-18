@@ -12,7 +12,7 @@ class Site_model extends CI_Model{
         $query=$this->db->select('b.building_id,b.building_name,bu.building_image')
                         ->from('buildings b')
                         ->join('building_images bu','b.building_id=bu.building_id')
-                        ->where(['bu.pref_image'=>1])
+                        ->where(array('bu.pref_image'=>1))
                         ->get();
         return $query->result_array();
     }
@@ -30,7 +30,7 @@ class Site_model extends CI_Model{
                         ->from('buildings b')
                         ->join('building_images bu','b.building_id=bu.building_id','left')
                         ->join('building_type bt','bt.type_id=b.building_type','left')
-                        ->where(['bu.pref_image'=>1])
+                        ->where(array('bu.pref_image'=>1))
                         ->get();
         return $query->result_array();
     }

@@ -20,8 +20,18 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="<?php echo base_url(); ?>assets2/vendor/jquery/jquery.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-       
+
+ <script>
+     //code to hide and show the transparent navbar
+         $(document).scroll(function() {
+             var bottom = $('#bottom').position().top + $('#bottom').outerHeight(true);
+             var y = $(this).scrollTop();
+         if (y > bottom) {
+         $('#bottomMenu').show();
+         } else {
+         $('#bottomMenu').hide();
+         }
+         });
+ </script>
   </body>
 </html>

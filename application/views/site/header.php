@@ -12,8 +12,10 @@
     <link href="<?php echo base_url(); ?>assets2/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url(); ?>assets2/css/full-slider.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>assets2/style.css" rel="stylesheet">
+   <link href="<?php echo base_url(); ?>assets2/style.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+      <script src="<?php echo base_url(); ?>assets2/vendor/jquery/jquery.min.js"></script>
+      <script src="<?php echo base_url(); ?>assets2/vendor/bootstrap/js/bootstrap.min.js"></script>
   </head>
 
   <body>
@@ -21,7 +23,7 @@
 <div class="container">
           <div class="row">
               <div class="col-md-12 text-center">
-                  <center><img src="<?php echo base_url(); ?>assets2/img/logo.png" style="width: 20%;margin-top:2%"></center>
+                  <center><img src="<?php echo base_url(); ?>assets2/img/logo.png" style="width: 15rem;margin-top:2%"></center>
               </div>
           </div>
 </div>

@@ -50,7 +50,7 @@
     <div class="row">
     <?php foreach($projects as $pro){ ?>
         <div class="col-md-3">
-        <div class="thumbnail">
+        <div class="thumbnail m-2">
             <div class="caption">
                 <h4><?php echo $pro['building_name']; ?></h4>
                 <p>Projects</p>

@@ -23,7 +23,7 @@
               
           </div>
           <br/>
-          <section id="tab">
+          <div id="tab"><div class="col-md-12">
             <div class="row">
             <?php foreach($buildings as $build){ ?>
               <div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6 filter hdpe">
@@ -38,13 +38,13 @@
                   </div>
               </div>
             <?php } ?>
-  
-            </div>
-          </section>
+
+            </div></div>
+          </div>
           <?php foreach($building_types as $but_ty){ ?>
-          <section id="tab<?php echo $but_ty['type_id']; ?>" style="display: none;">
+          <div id="tab<?php echo $but_ty['type_id']; ?>" style="display: none;"><div class="col-md-12">
             <div class="row">
-            <?php foreach($buildings as $build){ 
+            <?php foreach($buildings as $build){
                 if($build['type_id']==$but_ty['type_id']){
                 ?>
               <div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6 filter spray">
@@ -59,8 +59,8 @@
                   </div>
               </div>
             <?php }} ?>
-            </div>
-          </section>
+            </div></div>
+          </div>
                 <?php } ?>
           
 
@@ -116,7 +116,7 @@
                     <p><?php echo $build['building_status']; ?></p>
                 </div>
                 <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-                    <p><?php echo $build['building_status']; ?></p>
+                    <p><?php echo $build['building_size']; ?></p>
                 </div>
 
               
@@ -201,6 +201,7 @@
             });
         <?php } ?>
         });
+            $("#gridview11").click();
     });
       </script>
       

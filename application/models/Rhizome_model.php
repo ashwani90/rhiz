@@ -5,7 +5,7 @@ class Rhizome_model extends CI_Model{
     public function is_valid_login($username,$pass)
 	{
         
-		 $q=$this->db->where(['admin_email'=>$username,'admin_password'=>$pass])
+		 $q=$this->db->where(array('admin_email'=>$username,'admin_password'=>$pass))
 				->get('admin');
 		
 		if($q->num_rows())
@@ -60,7 +60,7 @@ class Rhizome_model extends CI_Model{
         foreach($res as $r)
         {
             $build_id=$r['building_id'];
-            $q=$this->db->where(['building_id'=>$build_id])->get('building_images');
+            $q=$this->db->where(array('building_id'=>$build_id))->get('building_images');
             $res[$count]['images'] = $q->result_array();
             $count++;
         }
@@ -70,18 +70,18 @@ class Rhizome_model extends CI_Model{
 
     public function get_images($building_id)
     {
-        $q=$this->db->where(['building_id'=>$building_id])->get('building_images');
+        $q=$this->db->where(array('building_id'=>$building_id))->get('building_images');
         return $q->result_array();
     }
 
     public function get_building_name($building_id)
     {
-        $q=$this->db->where(['building_id'=>$building_id])->get('buildings');
+        $q=$this->db->where(array('building_id'=>$building_id))->get('buildings');
         return $q->result_array()[0]['building_name'];
     }
     public function delete_image($image_id)
     {
-        $q=$this->db->where(['building_image_id'=>$image_id])->delete('building_images');
+        $q=$this->db->where(array('building_image_id'=>$image_id))->delete('building_images');
         return $q;
     }
 }
